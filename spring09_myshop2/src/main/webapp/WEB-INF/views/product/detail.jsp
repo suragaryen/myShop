@@ -31,12 +31,14 @@
 		}//product_delete() end
 		
 		function product_cart(){
-			if("#qty").val()=="0"{
+		
+			if($("#qty").val()=="0"){
 				alert("상품 수량 선택해 주세요");
 			}else{
 				document.productfrm.action="/cart/insert";
-				document.productfrm.submet();
-			}//if end
+				document.productfrm.submit();
+			}//if end 
+			
 		}//product_cart() end
 		
 	</script>
@@ -67,7 +69,7 @@
     <div class="col-sm-12">
     	<p><h3>상품 상세보기 / 상품수정 / 상품삭제</h3></p>
 	    <p>
-	        <button type="button" onclick="location.href='/product/list'" class="btn btn-primary">상품전체목록</button>
+	        <button type="button" onclick="location.href='/product/list'" class="btn btn-sm btn-secondary">상품전체목록</button>
 	    </p> 
     </div><!-- col end -->
   </div><!-- row end -->
@@ -117,9 +119,9 @@
 			    </tr>
 			    <tr>
 					<td colspan="2" align="center">
-					    <input type="button" value="상품수정"    onclick="product_update()" class="btn btn-warning"> 
-			            <input type="button" value="상품삭제"    onclick="product_delete()" class="btn btn-danger"> 
-			            <input type="button" value="장바구니담기" onclick="product_cart()"   class="btn btn-info">
+					    <input type="button" value="상품수정"    onclick="product_update()" class="btn btn-sm btn-secondary"> 
+			            <input type="button" value="상품삭제"    onclick="product_delete()" class="btn btn-sm btn-secondary"> 
+			            <input type="button" value="장바구니담기" onclick="product_cart()" class="btn btn-sm btn-secondary">
 					</td>
 			    </tr>   
 			    </tbody> 

@@ -16,6 +16,7 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/comment")
 public class CommentCont {
+	
 	public CommentCont() {
 		System.out.println("-----commentCont() 객체 생성됨");
 	}//end

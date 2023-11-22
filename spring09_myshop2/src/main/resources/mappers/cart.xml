@@ -6,7 +6,12 @@
  <!-- cart.xml -->
  
  <mapper namespace="cart">
- 
- 
+	<insert id="insert" parameterType="kr.co.itwill.cart.CartDTO">
+			INSERT INTO cart(cartno, product_code, price, qty, id)
+			VALUES (cart_seq.nextval, #{product_code}, #{price}, #{qty}, #{id})
+	
+	
+	</insert> 
+
  
  </mapper>
